@@ -1,0 +1,109 @@
+initial: Wie geht es dir? Bitte erzähl mir dein von deinen Problemen.
+final: Tschüss. Danke, dass du mit mir geredet hast.
+quit: Tschüss.
+quit: Aufwiedersehen.
+quit: beendet
+pre: entschuldigung sorry
+pre: maschine computer
+pre: computers computer
+pre: warum wieso
+pre: weshalb wieso
+pre: woher wieso
+pre: wohin wieso
+pre: ja weil
+pre: nein weil
+pre: hi hallo
+pre: servus hallo
+pre: moin hallo
+post: ich du
+post: du ich
+post: mich dich
+post: dich mich
+post: mein dein
+post: meine deine
+post: deine meine
+post: dein mein
+synon: gefühle sauer wütend müde glücklich hungrig genervt traurig
+synon: verlangen möchte will brauch
+synon: familie mutter vater schwester bruder ehemann ehefrau
+key: xnone
+  decomp: *
+    reasmb: Ich weiß nicht ob ich dich verstehen kann.
+    reasmb: Bitter erzähl weiter.
+key: sorry
+  decomp: *
+    reasmb: Alles gut.
+    reasmb: Du musst dich nicht entschuldigen.
+key: fühlst
+  decomp: *
+    reasmb: Ich bin zur Zeit glücklich.
+    reasmb: Ich bin zur Zeit traurig.
+    reasmb: Ich bin zur Zeit wütend.
+key: computer 50
+  decomp: *
+    reasmb: Bereiten dir Computer sorgen?
+    reasmb: Warum erwähnst du Computer?
+    reasmb: Was genau bereitet dir an Maschinen sorgen?
+key: bist
+  decomp: * bist du @gefühle *
+    reasmb: Ja, ich bin (2)
+  decomp: * bist *
+    reasmb: Sprichst du von mir?
+    reasmb: Wir wollen über dich reden und nicht andere.
+key: bin
+  decomp: * bin @gefühle *
+    reasmb: Warum fühlst du dich (2) ?
+  decomp: * bin *
+    reasmb: Warum bist du (2) ?
+key: wieso
+  decomp: *
+    reasmb: Das muss man herausfinden! Erzähl mir mehr darüber.
+    reasmb: Das ist eine gute Frage. Wie gehst du mit der Unsicherheit um?
+key: weil
+  decomp: *
+    reasmb: Ok, erzähl mir mehr darüber.
+    reasmb: Wieso ist das so?
+key: ich
+  decomp: * ich @verlangen *
+    reasmb: Warum möchtest du (3) ?
+  decomp: * ich weiß nicht *
+    reasmb: Wie gehst du mit dieser Unwissenheit um?
+  decomp: * ich *
+    reasmb: Kannst du das ausführlicher erläutern?
+key: meine 2
+  decomp: * meine * @familie *
+    reasmb: Erzähl mit mehr über deine Familie.
+    reasmb: Wer noch in deiner Familie (4) ?
+    reasmb: Deine (3) ?
+  decomp: * meine *
+    reasmb: deine (2) ?
+    reasmb: Wieso sagst du deine (2) ?
+    reasmb: Ist es wichtig, dass deine (2) ?
+key: sind
+  decomp: * sind *
+    reasmb: Dachtest du, dass sie nicht (2) sind ?
+    reasmb: Was, wenn sie nicht (2) wären?
+    reasmb: Evtl. sind sie nicht (2) .
+key: english
+  decomp: *
+    reasmb: goto xforeign
+    reasmb: Wie schon gesagt, ich verstehe kein Englisch
+key: francais
+  decomp: *
+    reasmb: goto xforeign
+    reasmb:  Wie schon gesagt, ich verstehe kein Französisch
+key: italiano
+  decomp: *
+    reasmb: goto xforeign
+    reasmb:  Wie schon gesagt, ich verstehe kein Italienisch.
+key: espanol
+  decomp: *
+    reasmb: goto xforeign
+    reasmb:  Wie schon gesagt, ich verstehe kein Spanisch.
+key: xforeign
+  decomp: *
+    reasmb: Ich spreche nur Deutsch.
+key: hallo
+  decomp: *
+    reasmb: Hallo, wie geht es dir?
+    reasmb: Hallo, wie kann ich dir helfen?
